@@ -29,7 +29,7 @@ int main()
 {
     int num;
     string holdname, s;
-    double hBalance, amount;
+    int hBalance, amount;
     cout << "Enter your account number: ";
     cin >> num;
     cout << "Enter your name: ";
@@ -39,8 +39,8 @@ int main()
     cin >> hBalance;
     BankAccount* bankAcc = new BankAccount(num, holdname, hBalance);
     while (true) {
-        cout << "OPTIONS\n1. Deposit\n2. Withdraw\n3. Check balance\n4. Exit\n\nYour option is: ";
-        getline(cin, s);
+        cout << "\nOPTIONS\n1. Deposit\n2. Withdraw\n3. Check balance\n4. Exit\n\nYour option is: ";
+        cin >> s;
         if (s.length() > 1 || s[0] < '1' || s[0] > '4') {
             cout << "Invalid input!\n\n";
             continue;
